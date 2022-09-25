@@ -11,11 +11,19 @@
   background-color: lightgray;
   margin-left:5px;
   border-radius: 5px;
-  display: flex;
 }
 .card {
   margin-top: 15px;
   margin-left: 15px;
   height: fit-content;
   /* border-radius: 2px; */
+}
+
+.home-page{
+  display: flex;
+}
+
+.cart-btn{
+  display: flex;
+  justify-content: space-between;
 }

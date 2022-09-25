@@ -1,5 +1,6 @@
 import React from 'react'
 import { Outlet,Link } from "react-router-dom";
+import "../css/Home.css";
 
 export default function Navbar() {
   return (
@@ -52,7 +53,7 @@ export default function Navbar() {
       </div>
     </div>
   </nav>
-  <div>
+  <div class="home">
   <Outlet />
   </div>
   </div>
