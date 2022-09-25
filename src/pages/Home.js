@@ -1,7 +1,14 @@
-import React from "react";
+import React,{useState} from "react";
 import "../css/Home.css";
 
 export default function Home() {
+  const [itemCount, setitemCount] = useState(0)
+  function BuyNow() {
+    alert("Buy Now!!");
+  }
+  // const AddToCart = () => {
+  //   setitemCount(itemCount + 1)
+  // };
   return (
     <div class="home-page">
       <div class="card" style={{ width: "250px" }}>
@@ -40,12 +47,29 @@ export default function Home() {
             bulk of the card's content.
           </p>
           <div class="cart-btn">
-            <a href="#" class="btn btn-primary" onClick={BuyNow()}>
+            <a href="#" class="btn btn-primary" onClick={() => BuyNow()}>
               Buy Now
             </a>
-            <a href="#" class="btn btn-primary">
+            {itemCount==0?
+            (
+              <a href="#" class="btn btn-primary" onClick={() => setitemCount(itemCount + 1)}>
               Add To Cart
             </a>
+            )
+          :
+          (
+            <div>
+            <a href="#" class="btn btn-primary" onClick={() => setitemCount(itemCount - 1)}>
+              -
+            </a>
+            <span>{itemCount}</span>
+            <a href="#" class="btn btn-primary" onClick={() => setitemCount(itemCount + 1)}>
+              +
+            </a>
+          </div>
+          )
+          }
+           
           </div>
         </div>
       </div>
