@@ -33,7 +33,7 @@ export default function Navbar() {
           <Link class="nav-link" to="/product">Product</Link>
             </li>
             <li class="nav-item">
-            <Link class="nav-link" to="/service">Service</Link>
+          <Link class="nav-link" to="/feature">Feature</Link>
             </li>
             <li class="nav-item">
             <Link class="nav-link" to="/contactus">Contact</Link>
